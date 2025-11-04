@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo Pedra, Papel e Tesoura</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Pedra, Papel e Tesoura</h1>
+
+  <!-- Mensagem de turno -->
+  <p id="mensagem">Jogador 1, faça sua escolha:</p>
+
+  <!-- Placar de vitórias -->
+  <div id="placar">
+    <p>Vitórias Jogador 1: <span id="vitorias1">0</span></p>
+    <p>Vitórias Jogador 2: <span id="vitorias2">0</span></p>
+  </div>
+
+  <!-- Botões de escolha -->
+  <div id="botoes">
+    <button onclick="jogar('pedra')">🧱 Pedra</button>
+    <button onclick="jogar('papel')">📄 Papel</button>
+    <button onclick="jogar('tesoura')">✂️ Tesoura</button>
+  </div>
+
+  <!-- Resultado da rodada -->
+  <div id="resultado"></div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    window.onload = function() {
+      alert("Bem-vindo ao Pedra, Papel ou Tesoura!\n\nRegras:\nJogador 1 escolhe uma entre as três opções, depois é a vez do Jogador 2.\nPedra quebra Tesoura.\nTesoura corta Papel.\nPapel embrulha Pedra.");
+    };
+  </script>
+</body>
+</html>
