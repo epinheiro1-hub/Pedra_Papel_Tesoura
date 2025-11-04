@@ -40,8 +40,8 @@ def jogar():
             "mensagem": f"Jogador 1 escolheu {j1}, Jogador 2 escolheu {j2}. {resultado}"
         })
 #Recebe as duas jogadas e devolve o resultado
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
 
     
 
